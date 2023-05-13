@@ -1,4 +1,13 @@
-
+```
+# Define our imshow function 
+def imshow(title = "Image", image = None, size = 10):
+    w, h = image.shape[0], image.shape[1]
+    aspect_ratio = w/h
+    plt.figure(figsize=(size * aspect_ratio,size))
+    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    plt.title(title)
+    plt.show()
+```
 ### Grab Cut Algorithm
 <img width="589" alt="Screenshot 2023-05-13 at 4 06 45 PM" src="https://github.com/ayushs0911/OpenCV/assets/122048067/73c5af4d-bb3c-4b3d-8d76-6a2fe9a9e5bf">
 
